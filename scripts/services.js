@@ -387,7 +387,7 @@ const SERVICES = [
     icon: 'bi-wind',
     serviceName: 'Feet Cracks (Cracked Heels)',
     shortIntro: 'Restore Soft, Healthy Feet with Ayurvedic Care',
-    image: '../images/Services/13-Cracked-Heels.png',
+    image: '../images/Services/13-Feet-Cracks.png',
     imagePlaceholderIcon: 'bi-tree',
     description:
       'Cracked heels, also known as heel fissures, are a common foot condition caused by dry, thickened skin that splits under pressure. While mild cracks may only be a cosmetic concern, deeper cracks can become painful, bleed, and increase the risk of infection. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that nourish the skin, correct the root cause, and promote healthy, smooth feet naturally.',
@@ -418,7 +418,7 @@ const SERVICES = [
     icon: 'bi-lungs',
     serviceName: 'Chronic Leg & Foot Ulcers',
     shortIntro: 'Advanced Ayurvedic Care for Non-Healing Wounds',
-    image: '../images/Services/14-Chronic-Leg-Foot-Ulcers.png',
+    image: '../images/Services/14-Chronic-Leg.png',
     imagePlaceholderIcon: 'bi-bandaid',
     description:
       'Chronic ulcers are open wounds that fail to heal within a normal period, often lasting for weeks or months. They commonly occur on the legs and feet due to poor blood circulation, diabetes, varicose veins, infections, pressure injuries, or underlying medical conditions. At Sudarshan Ayurveda Centre, we provide comprehensive Ayurvedic care that focuses on healing the wound, improving circulation, reducing inflammation, and treating the root cause naturally.',
@@ -577,6 +577,37 @@ const SERVICES = [
     imagePlaceholderIcon: 'bi-stars',
     description:
       'Alopecia is a condition that causes partial or complete hair loss from the scalp or other parts of the body. Hair loss may occur gradually or suddenly, resulting in thinning hair, bald patches, or widespread hair shedding. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that address the root cause of hair loss, nourish the scalp, strengthen hair follicles, and promote healthy, natural hair regrowth.',
+    benefits: [
+      'Stimulates dormant hair follicles to regrow',
+      'Nourishes the scalp and strengthens hair roots',
+      'Corrects underlying autoimmune and hormonal triggers',
+      'Reduces scalp inflammation and oxidative stress',
+      'Promotes healthy, thick, natural hair regrowth',
+    ],
+    procedure: [
+      'Hair loss pattern and dosha analysis',
+      'Shirodhara and medicated scalp oil therapy',
+      'Nasya for scalp nourishment via nasal route',
+      'Blood-purifying and immuno-modulating herbs',
+      'Nutritional supplementation through Rasayana therapy',
+    ],
+    duration: '12 – 24 weeks for visible regrowth',
+    suitableFor: [
+      'Alopecia areata (patchy hair loss)',
+      'Androgenetic alopecia (male/female pattern)',
+      'Telogen effluvium (stress-related diffuse loss)',
+      'Traction alopecia from tight hairstyles',
+    ],
+  },
+  {
+    id: 20,
+    icon: 'bi-flower2',
+    serviceName: 'Obesity',
+    shortIntro: 'Achieve a Healthy Weight with Natural Ayurvedic Care',
+    image: '../images/Services/20.Obesity.png',
+    imagePlaceholderIcon: 'bi-stars',
+    description:
+      'Obesity is a condition caused by excessive body fat that can increase the risk of diabetes, high blood pressure, heart disease, joint pain, and other health problems. It is often linked to unhealthy eating habits, lack of physical activity, hormonal imbalance, stress, and poor metabolism. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that focus on the root cause, helping you lose weight naturally while improving your overall health.',
     benefits: [
       'Stimulates dormant hair follicles to regrow',
       'Nourishes the scalp and strengthens hair roots',
@@ -774,9 +805,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const listEl = document.getElementById('svcNavList');
   listEl.innerHTML = SERVICES.map(buildNavItem).join('');
 
-  /* ── Build mobile scroll tabs ── */
+  /* ── Build mobile scroll tabs (hidden by design) ── */
   const tabsEl = document.getElementById('svcNavTabs');
-  tabsEl.innerHTML = SERVICES.map(buildTabPill).join('');
+  if (tabsEl) {
+    tabsEl.innerHTML = SERVICES.map(buildTabPill).join('');
+  }
 
   /* ── Populate footer service links (first 5) ── */
   const footerLinks = document.getElementById('footerServiceLinks');
@@ -786,15 +819,42 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 
+  /* ── Mobile menu controls ── */
+  const svcNav = document.getElementById('svcNav');
+  const svcMenuToggle = document.getElementById('svcMenuToggle');
+  const svcNavClose = document.getElementById('svcNavClose');
+  const svcBackdrop = document.getElementById('svcBackdrop');
+
+  function closeSvcNav() {
+    svcNav.classList.remove('svc-nav--open');
+    svcNav.setAttribute('aria-hidden', 'true');
+    svcMenuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openSvcNav() {
+    svcNav.classList.add('svc-nav--open');
+    svcNav.setAttribute('aria-hidden', 'false');
+    svcMenuToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  svcMenuToggle?.addEventListener('click', () => openSvcNav());
+  svcNavClose?.addEventListener('click', () => closeSvcNav());
+  svcBackdrop?.addEventListener('click', () => closeSvcNav());
+
   /* ── Event delegation for nav clicks ── */
   listEl.addEventListener('click', e => {
     const btn = e.target.closest('.svc-nav__btn');
-    if (btn) loadService(parseInt(btn.dataset.id));
+    if (btn) {
+      loadService(parseInt(btn.dataset.id));
+      if (window.innerWidth < 992) closeSvcNav();
+    }
   });
-  tabsEl.addEventListener('click', e => {
-    const btn = e.target.closest('.svc-tab-btn');
-    if (btn) loadService(parseInt(btn.dataset.id));
-  });
+  if (tabsEl) {
+    tabsEl.addEventListener('click', e => {
+      const btn = e.target.closest('.svc-tab-btn');
+      if (btn) loadService(parseInt(btn.dataset.id));
+    });
+  }
 
   /* ── Default: load Service 1 ── */
   loadService(1);

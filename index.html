@@ -26,9 +26,10 @@
 <header class="site-header" id="header">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#home">
         <div class="brand-logo">
-          <i class="bi bi-flower2"></i>
+          <!-- <i class="bi bi-flower2"></i> -->
+          <img src="./images/Logo.png" alt="Sudarshan Ayurveda Hospital Logo" class="brand-logo">
         </div>
         <div class="brand-text">
           <span class="brand-title">SUDARSHAN</span>
@@ -58,73 +59,73 @@
 
 <!-- ===== HOME / HERO SECTION ===== -->
 <section class="hero-section" id="home">
-  <div class="hero-overlay"></div>
-  <div class="container position-relative">
-    <div class="row align-items-center min-vh-hero flex-column-reverse flex-lg-row">
-      <!-- Left content -->
-      <div class="col-lg-6 hero-text" data-aos>
-        <div class="ornament-divider mb-3">
-          <span></span><i class="bi bi-flower1"></i><span></span>
-        </div>
-        <h1 class="hero-heading">
-          <span class="line-1">163 YEARS OF</span>
-          <span class="line-2">TRUSTED AYURVEDIC</span>
-          <span class="line-3">HEALING</span>
-        </h1>
-        <p class="hero-tagline">
-          <i class="bi bi-stars me-2"></i>FIVE GENERATIONS OF AUTHENTIC AYURVEDA SINCE 1863<i class="bi bi-stars ms-2"></i>
-        </p>
-        <p class="hero-desc">Traditional Wisdom. Natural Healing. Holistic Wellness.<br>Your Health, Our Heritage.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn btn-book-lg"><i class="bi bi-calendar-check me-2"></i>BOOK APPOINTMENT</a>
-          <a href="https://wa.me/910000000000" target="_blank" class="btn btn-whatsapp"><i class="bi bi-whatsapp me-2"></i>WHATSAPP NOW</a>
-        </div>
-      </div>
-
-      <!-- Right doctor card -->
-      <div class="col-lg-6 mt-5 mt-lg-0">
-        <div class="doctor-wrap">
-          <div class="doctor-glow"></div>
-          <div class="doctor-photo">
-            <!-- <i class="bi bi-person-fill"></i> -->
-            <img src="./images/Sudharshan-Painting.png" alt="" class="Sudarshan-Murthy">
-          </div>
-          <div class="doctor-card">
-            <!-- <h3>Dr. S. Sudarshan Murthy</h3>
-            <p class="doctor-role">Senior Ayurvedic Physician</p>
-            <p class="doctor-exp"><i class="bi bi-arrow-right me-1"></i> 50+ YEARS OF EXPERIENCE <i class="bi bi-arrow-left ms-1"></i></p> -->
-            <img src="./images/Name-Frame.png" alt="Dr. S. Sudarshan Murthy" class="img-fluid">
+  <div class="hero-shade"></div>
+  <div class="container-fluid hero-shell">
+    <div class="hero-poster">
+      <div class="hero-copy">
+        <!-- <div class="hero-devotion">శ్రీ ధన్వంతరయే నమః</div> -->
+        <div class="hero-brand-lockup">
+          <!-- <img src="./images/hero-emblem.png" alt="Sudarshan Ayurveda Centre logo" class="hero-emblem"> -->
+          <div class="hero-brand-text">
+            <h1>Sudarshan</h1>
+            <p>Ayurveda Centre</p>
           </div>
         </div>
+        <div class="hero-rule"><span></span><i class="bi bi-flower1"></i><span></span></div>
+        <p class="hero-legacy">163 Years of Trusted Ayurvedic Healing</p>
+        <p class="hero-subcopy">Five Generations of Authentic Ayurveda Since 1863</p>
       </div>
-    </div>
 
-    <!-- Stats bar -->
-    <div class="stats-bar row text-center g-4 g-lg-0">
-      <div class="col-6 col-lg stat-item">
-        <i class="bi bi-bank2"></i>
-        <h4>163</h4>
-        <p>Years of Legacy</p>
-      </div>
-      <div class="col-6 col-lg stat-item">
-        <i class="bi bi-people-fill"></i>
-        <h4>5</h4>
-        <p>Generations of Ayurvedic Expertise</p>
-      </div>
-      <!-- <div class="col-6 col-lg stat-item">
-        <i class="bi bi-leaf"></i>
-        <h4>260+</h4>
-        <p>Herbal Formulations &amp; Medicines</p>
-      </div>
-      <div class="col-6 col-lg stat-item">
-        <i class="bi bi-geo-alt-fill"></i>
-        <h4>63+</h4>
-        <p>Cities &amp; Towns Serviced</p>
-      </div> -->
-      <div class="col-12 col-lg stat-item">
-        <i class="bi bi-emoji-smile"></i>
-        <h4>1000+</h4>
-        <p>Happy Patients &amp; Counting</p>
+      <img src="./images/hero-doctor.png" alt="Ayurveda doctor at Sudarshan Ayurveda Centre" class="hero-doctor">
+
+      <div class="hero-details">
+        <div class="hero-stats" aria-label="Sudarshan Ayurveda Centre highlights">
+          <div class="hero-stat">
+            <i class="bi bi-bank2"></i>
+            <strong>163</strong>
+            <span>Years of Legacy</span>
+          </div>
+          <div class="hero-stat">
+            <i class="bi bi-people-fill"></i>
+            <strong>5</strong>
+            <span>Generations<br>of Expertise</span>
+          </div>
+          <div class="hero-stat">
+            <i class="bi bi-mortarboard-fill"></i>
+            <!-- <strong>Pure Herbal</strong> -->
+            <span>Pure Herbal <br> Treatments</span>
+          </div>
+          <div class="hero-stat">
+            <i class="bi bi-heart-fill"></i>
+            <!-- <strong>Personalized</strong> -->
+            <span> Personalized <br> Care &amp; Support</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="hero-action hero-action-book">
+            <i class="bi bi-telephone-outbound-fill"></i>
+            <span><strong>Book Appointment</strong><small>Consult Our Expert Doctors</small></span>
+          </a>
+          <a href="https://wa.me/919490367774" target="_blank" class="hero-action hero-action-whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            <span><strong>Whatsapp Now</strong><small>Chat With Us</small></span>
+          </a>
+          <!-- <div class="hero-phones">
+            <i class="bi bi-telephone-fill"></i>
+            <span>94903 67774</span>
+            <span>98496 03366</span>
+          </div> -->
+        </div>
+
+        <div class="hero-bottom">
+          <i class="bi bi-flower2"></i>
+          <div>
+            <strong>Healing Through Nature, Caring for Generations</strong>
+            <span>Authentic Ayurveda <b>&bull;</b> Natural Healing <b>&bull;</b> Holistic Wellness</span>
+          </div>
+          <i class="bi bi-flower2"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -139,7 +140,7 @@
       <p>Healing Through the Timeless Wisdom of Ayurveda</p>
       <div class="ornament-divider mx-auto"><span></span><i class="bi bi-flower1"></i><span></span></div>
     </div>
-    <div class="row align-items-center g-5">
+    <div class="row g-5">
       <div class="col-lg-6">
         <div class="about-image-block">
           <!-- <i class="bi bi-mortarboard"></i> -->
