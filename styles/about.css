@@ -92,6 +92,9 @@
   color: rgba(240,210,122,0.55);
   box-shadow: 0 18px 50px rgba(0,0,0,0.18);
 }
+.about-img-main img{
+  border-radius: 20px;
+}
 .about-badge {
   position: absolute;
   bottom: -18px;
@@ -136,8 +139,15 @@
   padding: 16px 12px;
   text-align: center;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 8px;
+  width: 234px;
+  height: 100px;
 }
-.mini-stat i { font-size: 1.4rem; color: var(--color-gold); margin-bottom: 6px; display: block; }
+.mini-stat__content{
+  text-align: left;
+}
+.mini-stat i { font-size: 2.54rem; color: var(--color-gold); margin-bottom: 6px; display: block; }
 .mini-stat h5 {
   font-family: var(--font-heading);
   font-weight: 700;

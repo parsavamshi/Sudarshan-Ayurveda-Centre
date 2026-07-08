@@ -8,8 +8,13 @@
    ========================================================================== */
 .glr-hero {
   position: relative;
-  background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%);
-  padding: 110px 0 80px;
+  /* background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%); */
+  background-image: url('../images/Gallery-Banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 110px 0 80px;   */
+  padding: 140px 0 130px;
   overflow: hidden;
 }
 .glr-hero::before {
@@ -28,8 +33,9 @@
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: clamp(2.4rem, 5vw, 4rem);
-  color: #fff;
-  margin-bottom: 14px;
+  /* color: #fff; */
+  color: var(--color-dark-green);
+  margin-bottom: 40px;
 }
 .glr-breadcrumb { --bs-breadcrumb-divider: '›'; }
 .glr-breadcrumb .breadcrumb-item a { color: var(--color-gold-light); }

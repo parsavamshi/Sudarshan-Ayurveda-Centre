@@ -14,6 +14,9 @@
   text-transform: uppercase;
   font-size: 0.82rem;
   margin-bottom: 8px;
+  font-size: 18px;
+  /* color: #916f00; */
+  color: #806610;
 }
 .ctn-section-title {
   font-family: var(--font-heading);
@@ -28,7 +31,11 @@
    ========================================================================== */
 .ctn-hero {
   position: relative;
-  background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%);
+  /* background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%); */
+   background-image: url('../images/Contact-Banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 110px 0 80px;
   overflow: hidden;
 }
@@ -102,7 +109,8 @@
 .ctn-info-card__icon--emergency { background: linear-gradient(135deg, #7a1a1a, #c0392b); }
 
 .ctn-info-card h5 {
-  font-family: var(--font-heading);
+  /* font-family: var(--font-heading); */
+  font-family: var(--font-body);
   font-weight: 700;
   color: var(--color-dark-green);
   margin-bottom: 10px;
@@ -113,6 +121,7 @@
   font-size: 0.9rem;
   line-height: 1.65;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 .ctn-info-card p a { color: #444; }
 .ctn-info-card p a:hover { color: var(--color-dark-green); }
@@ -192,12 +201,16 @@
   /* padding: 80px 0; */
 }
 .ctn-form-aside {
-  padding: 36px 28px;
+  /* padding: 36px 28px; */
   background: linear-gradient(160deg, #0f2a1d, #173a26);
-  border: 1px solid rgba(212,175,55,0.3);
-  border-radius: 20px;
+  /* border: 1px solid rgba(212,175,55,0.3); */
+  /* border-radius: 20px; */
   position: sticky;
   top: 90px;
+}
+.ctn-form-aside img{
+  /* border-radius: 20px; */
+  width: 100%;
 }
 .ctn-form-aside h3 {
   font-family: var(--font-heading);

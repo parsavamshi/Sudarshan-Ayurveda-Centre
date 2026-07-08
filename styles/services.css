@@ -8,7 +8,11 @@
    ========================================================================== */
 .svc-hero {
   position: relative;
-  background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%);
+  /* background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%); */
+   background-image: url('../images/Services-Banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 110px 0 80px;
   overflow: hidden;
 }

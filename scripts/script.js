@@ -60,14 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// ---- Toggle solid navbar background on scroll ----
+// ---- Toggle navbar behavior on scroll ----
 const siteHeader = document.getElementById('header');
 
 function toggleHeaderBg() {
   if (window.scrollY > 60) {
     siteHeader.classList.add('scrolled');
+    siteHeader.classList.add('fixed');
   } else {
     siteHeader.classList.remove('scrolled');
+    siteHeader.classList.remove('fixed');
   }
 }
 window.addEventListener('scroll', toggleHeaderBg);
