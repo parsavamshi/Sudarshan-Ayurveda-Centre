@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/about.css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
 </head>
@@ -335,7 +336,7 @@
       <h2 class="text-white">What Our Patients Say</h2>
       <div class="ornament-divider mx-auto"><span></span><i class="bi bi-flower1"></i><span></span></div>
     </div>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="testimonial-card mx-auto">
@@ -373,7 +374,97 @@
         <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
       </div>
+    </div> -->
+
+    <div class="swiper testimonialSwiper" aria-label="Patient testimonials">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"After years of struggling with chronic joint pain, the Panchakarma treatment here gave me relief I never thought possible."</p>
+            <h5>— Lakshmi Narayana</h5>
+            <span>Kakinada</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Five generations of expertise really shows. Dr. Murthy took the time to understand my condition."</p>
+            <h5>— Ramesh Babu</h5>
+            <span>Rajahmundry</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"The herbal medicines worked wonders for my skin condition."</p>
+            <h5>— Sita Mahalakshmi</h5>
+            <span>Vizag</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Excellent doctors and caring staff. Highly recommended."</p>
+            <h5>— Srinivas Rao</h5>
+            <span>Hyderabad</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Authentic Ayurveda treatment with remarkable results."</p>
+            <h5>— Anitha Devi</h5>
+            <span>Vijayawada</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Very peaceful environment and excellent consultation."</p>
+            <h5>— Prasad Kumar</h5>
+            <span>Srikakulam</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Professional doctors with personalized treatment."</p>
+            <h5>— Bhavani</h5>
+            <span>Puducherry</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"I recovered much faster than expected."</p>
+            <h5>— Ravi Teja</h5>
+            <span>Tanuku</span>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card" tabindex="0" role="button" title="Click to copy this testimonial">
+            <i class="bi bi-quote quote-icon"></i>
+            <p class="testimonial-copy">"Best Ayurvedic hospital I've visited. Great experience."</p>
+            <h5>— Madhavi</h5>
+            <span>Amalapuram</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
+
   </div>
 </section>
 
@@ -548,9 +639,10 @@
     <div class="row g-4">
       <div class="col-lg-4">
         <div class="footer-brand">
-          <i class="bi bi-flower2"></i>
-          <div>
-            <span class="brand-title">SUDARSHAN</span><br>
+          <!-- <i class="bi bi-flower2"></i> -->
+           <img src="./images/Logo.png" alt="Sudarshan Ayurveda Hospital Logo" class="brand-logo">
+          <div class="d-grid">
+            <span class="brand-title">SUDARSHAN</span>
             <span class="brand-sub">AYURVEDA HOSPITAL</span>
           </div>
         </div>
@@ -559,27 +651,29 @@
       <div class="col-lg-2 col-6">
         <h6>Quick Links</h6>
         <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-6">
         <h6>Services</h6>
         <ul class="footer-links">
-          <li><a href="#services">Panchakarma</a></li>
-          <li><a href="#services">Herbal Medicine</a></li>
-          <li><a href="#services">Wellness Consultation</a></li>
+          <li><a href="./services.html">Psoriasis</a></li>
+          <li><a href="./services.html">Hair Problems, Hair Fall & Hair Growth</a></li>
+          <li><a href="./services.html">Marital Life Problems</a></li>
+          <li><a href="./services.html">Digestive Disorders</a></li>
+          <li><a href="./services.html">Hemorrhoids (Piles)</a></li>
         </ul>
       </div>
       <div class="col-lg-3">
         <h6>Follow Us</h6>
         <div class="social-icons">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=6159092350207" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/sudarshanayurvedahospital/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/@sudarshanayurvedahospital" target="_blank"><i class="bi bi-youtube"></i></a>
+          <!-- <a href="https://wa.me/919959092350" target="_blank"><i class="bi bi-whatsapp"></i></a> -->
         </div>
       </div>
     </div>
@@ -594,5 +688,82 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./scripts/script.js"></script>
+
+// --- Swiper.js for testimonials ----
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+(function () {
+  if (window.__testimonialSwiperInitialized) return;
+  window.__testimonialSwiperInitialized = true;
+
+  const sliderEl = document.querySelector('.testimonialSwiper');
+  if (!sliderEl || typeof Swiper === 'undefined') return;
+
+  const cards = sliderEl.querySelectorAll('.testimonial-card');
+  cards.forEach((card) => {
+    const text = card.querySelector('.testimonial-copy')?.textContent?.trim() || '';
+    if (!text) return;
+
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('title', 'Click to copy this testimonial');
+
+    const copyText = async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        card.classList.add('copied');
+        window.setTimeout(() => card.classList.remove('copied'), 1200);
+      } catch (error) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(card.querySelector('.testimonial-copy'));
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    };
+
+    card.addEventListener('click', copyText);
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        copyText();
+      }
+    });
+  });
+
+  window.__testimonialSwiperInstance = new Swiper(sliderEl, {
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
+    loop: true,
+    speed: 600,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>

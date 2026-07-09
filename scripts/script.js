@@ -74,3 +74,6 @@ function toggleHeaderBg() {
 }
 window.addEventListener('scroll', toggleHeaderBg);
 toggleHeaderBg(); // run once on load in case page refreshes mid-scroll
+
+
+
