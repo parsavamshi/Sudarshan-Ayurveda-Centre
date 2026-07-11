@@ -439,7 +439,8 @@ a { text-decoration: none; }
 .hero-copy {
   position: relative;
   z-index: 3;
-  align-self: start;
+  align-self: end;
+  /* align-self: start; */
   max-width: 1030px;
   padding-top: clamp(18px, 3.1vw, 58px);
   text-align: center;

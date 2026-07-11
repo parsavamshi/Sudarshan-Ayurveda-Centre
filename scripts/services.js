@@ -542,7 +542,7 @@ const SERVICES = [
     icon: 'bi-gem',
     serviceName: 'Brittle Nails (Onychoschizia)',
     shortIntro: 'Restore Strong, Healthy Nails with Ayurvedic Care',
-    image: '../images/Services/18-Brittle-Nails.jpg',
+    image: '../images/Services/18-Brittle-Nails.png',
     imagePlaceholderIcon: 'bi-gem',
     description:
       'Brittle nails (Onychoschizia) are a common nail disorder in which the nails become dry, thin, weak, and split or peel into layers. While often considered a cosmetic concern, brittle nails may also indicate nutritional deficiencies, hormonal imbalance, dehydration, or underlying medical conditions. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that nourish the body from within, strengthen nail health, and address the root cause naturally.',
@@ -815,7 +815,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerLinks = document.getElementById('footerServiceLinks');
   if (footerLinks) {
     footerLinks.innerHTML = SERVICES.slice(0, 5)
-      .map(s => `<li><a href="services.html">${s.serviceName}</a></li>`)
+      .map(s => `<li><a href="services.html#svc-${s.id}">${s.serviceName}</a></li>`)
       .join('');
   }
 
@@ -824,6 +824,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const svcMenuToggle = document.getElementById('svcMenuToggle');
   const svcNavClose = document.getElementById('svcNavClose');
   const svcBackdrop = document.getElementById('svcBackdrop');
+
+  /* ── Create stable fragment anchors for each service so external links jump correctly ── */
+  const svcContentEl = document.getElementById('svcContent');
+  if (svcContentEl) {
+    SERVICES.forEach(svc => {
+      if (!document.getElementById(`svc-${svc.id}`)) {
+        const a = document.createElement('div');
+        a.id = `svc-${svc.id}`;
+        // leave visual layout unchanged; allow header offset when scrolling
+        a.style.height = '0px';
+        a.style.overflow = 'hidden';
+        a.style.scrollMarginTop = '100px';
+        svcContentEl.parentNode.insertBefore(a, svcContentEl);
+      }
+    });
+  }
 
   function closeSvcNav() {
     svcNav.classList.remove('svc-nav--open');
@@ -856,8 +872,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── Default: load Service 1 ── */
-  loadService(1);
+  /* ── Default: load Service from hash or fallback to Service 1 ── */
+  (function loadFromHashOrDefault() {
+    const hash = window.location.hash || '';
+    let initial = 1;
+    const m = hash.match(/#?svc-(\d+)/) || hash.match(/#(\d+)/);
+    if (m) {
+      const parsed = parseInt(m[1], 10);
+      if (!Number.isNaN(parsed) && SERVICES.some(s => s.id === parsed)) initial = parsed;
+    }
+    loadService(initial);
+    // After rendering, ensure page scrolls to the fragment (works when navigated from other pages)
+    setTimeout(() => {
+      const target = document.getElementById(`svc-${initial}`);
+      if (target) {
+        try { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        catch (e) { target.scrollIntoView(); }
+      }
+    }, 300);
+
+    // Handle hash changes (e.g., clicking footer links while already on services.html)
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash || '';
+      const m = hash.match(/#?svc-(\d+)/) || hash.match(/#(\d+)/);
+      if (m) {
+        const id = parseInt(m[1], 10);
+        if (!Number.isNaN(id) && SERVICES.some(s => s.id === id)) {
+          loadService(id);
+          setTimeout(() => {
+            const tgt = document.getElementById(`svc-${id}`);
+            if (tgt) tgt.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 220);
+        }
+      }
+    });
+
+    // Intercept clicks on anchors that point to service fragments so we can SPA-load and scroll
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest && e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const m = href.match(/#?svc-(\d+)$/) || href.match(/#(\d+)$/);
+      if (m) {
+        const id = parseInt(m[1], 10);
+        if (!Number.isNaN(id) && SERVICES.some(s => s.id === id)) {
+          e.preventDefault();
+          // update URL and load
+          history.pushState(null, '', `services.html#svc-${id}`);
+          loadService(id);
+          setTimeout(() => {
+            const tgt = document.getElementById(`svc-${id}`);
+            if (tgt) tgt.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 220);
+        }
+      }
+    });
+  })();
 
   /* ── Back to top ── */
   const backToTop = document.getElementById('backToTop');

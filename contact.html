@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/contact.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
 </head>
 <body>
@@ -174,7 +176,7 @@
       <div class="row g-5 align-items-start justify-content-center">
 
         <!-- Left: decorative info -->
-        <div class="col-lg-4 d-none d-lg-block">
+        <div class="col-lg-4 d-lg-block">
           <div class="ctn-form-aside">
             <!-- <div class="ornament-divider mb-3"><span></span><i class="bi bi-flower1"></i><span></span></div>
             <h3>Send Us a Message</h3>
@@ -205,6 +207,63 @@
           </div>
         </div> -->
       </div>
+         <!-- elegant share trigger -->
+        <button
+      class="share-btn share-location-btn"
+      data-map-link="https://maps.app.goo.gl/XmnutiKLMNEnk2r87"
+      data-location="Sudarshan Ayurveda Hospital - Kakinada">
+Share Location
+</button>
+
+          <!-- Popup overlay component -->
+          <div class="overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-label="Share location options">
+              <div class="popup">
+                  <h2><i class="fa-solid fa-location-dot" style="font-size: 1.6rem; margin-right: 6px; background: none; -webkit-background-clip: unset; color: #2c6e9e;"></i> Share map</h2>
+                  
+                  <!-- subtle map indicator -->
+                  <div class="location-preview">
+                      <i class="fa-solid fa-map-pin"></i>
+                      <span id="previewLinkShort">Google Maps Location</span>
+                  </div>
+                  
+                  <div class="share-options">
+                      <!-- WhatsApp share -->
+                      <div class="option" id="whatsappOption" tabindex="0" role="button" aria-label="Share on WhatsApp">
+                          <div class="icon-box whatsapp">
+                              <i class="fab fa-whatsapp"></i>
+                          </div>
+                          <span>WhatsApp</span>
+                      </div>
+                      
+                      <!-- Message (SMS) -->
+                      <div class="option" id="messageOption" tabindex="0" role="button" aria-label="Share via SMS">
+                          <div class="icon-box message">
+                              <i class="fa-solid fa-comment-sms"></i>
+                          </div>
+                          <span>Message</span>
+                      </div>
+                      
+                      <!-- Copy link -->
+                      <div class="option" id="copyOption" tabindex="0" role="button" aria-label="Copy map link">
+                          <div class="icon-box copy">
+                              <i class="fa-solid fa-link"></i>
+                          </div>
+                          <span>Copy</span>
+                      </div>
+                  </div>
+                  
+                  <!-- dynamic copied toast -->
+                  <div id="copiedToastContainer" style="min-height: 48px;">
+                      <div class="copied-text" id="copiedText">
+                          <i class="fa-solid fa-check-circle"></i> Link copied!
+                      </div>
+                  </div>
+                  
+                  <button class="close-btn" id="closePopupBtn" aria-label="Close popup">
+                      <i class="fa-solid fa-xmark"></i> Close
+                  </button>
+              </div>
+          </div>
     </div>
   </section>
           <!-- <div class="ctn-form-card">
@@ -294,7 +353,7 @@
       <div class="row g-5 align-items-start justify-content-center">
 
         <!-- Left: decorative info -->
-        <div class="col-lg-4 d-none d-lg-block">
+        <div class="col-lg-4 d-lg-block">
           <div class="ctn-form-aside">
             <!-- <div class="ornament-divider mb-3"><span></span><i class="bi bi-flower1"></i><span></span></div>
             <h3>Send Us a Message</h3>
@@ -325,6 +384,12 @@
           </div>
         </div> -->
       </div>
+      <button
+    class="share-btn share-location-btn"
+    data-map-link="https://maps.app.goo.gl/5ycxcYmhjqNbGHZR9"
+    data-location="Sudarshan Ayurveda Hospital - Tanuku">
+Share Location
+</button>
     </div>
   </section>
           <!-- <div class="ctn-form-card">
@@ -413,7 +478,7 @@
       <div class="row g-5 align-items-start justify-content-center">
 
         <!-- Left: decorative info -->
-        <div class="col-lg-4 d-none d-lg-block">
+        <div class="col-lg-4 d-lg-block">
           <div class="ctn-form-aside">
             <!-- <div class="ornament-divider mb-3"><span></span><i class="bi bi-flower1"></i><span></span></div>
             <h3>Send Us a Message</h3>
@@ -444,6 +509,17 @@
           </div>
         </div> -->
       </div>
+      <!-- elegant share trigger -->
+      <button
+    class="share-btn share-location-btn"
+    data-map-link="https://maps.app.goo.gl/LjZBRzuMcQWTo55N7"
+    data-location="Sudarshan Ayurveda Hospital - Amalapuram">
+Share Location
+</button>
+
+      <!--  -->
+ 
+
     </div>
   </section>
           <!-- <div class="ctn-form-card">
@@ -532,7 +608,7 @@
       <div class="row g-5 align-items-start justify-content-center">
 
         <!-- Left: decorative info -->
-        <div class="col-lg-4 d-none d-lg-block">
+        <div class="col-lg-4 d-lg-block">
           <div class="ctn-form-aside">
             <!-- <div class="ornament-divider mb-3"><span></span><i class="bi bi-flower1"></i><span></span></div>
             <h3>Send Us a Message</h3>
@@ -563,6 +639,12 @@
           </div>
         </div> -->
       </div>
+      <button
+    class="share-btn share-location-btn"
+    data-map-link="https://maps.app.goo.gl/Mi4ykcoiFkF8wGDm6"
+    data-location="Sudarshan Ayurveda Hospital - Rajahmundry">
+Share Location
+</button>
     </div>
   </section>
           <!-- <div class="ctn-form-card">
@@ -811,20 +893,20 @@ https://www.youtube.com/channel/UCOG59hq217nGDN2wRkL2xsw -->
       </div>
       <div class="col-lg-3 col-6">
         <h6>Services</h6>
-        <ul class="footer-links">
-          <li><a href="./services.html">Psoriasis</a></li>
-          <li><a href="./services.html">Hair Problems, Hair Fall & Hair Growth</a></li>
-          <li><a href="./services.html">Marital Life Problems</a></li>
-          <li><a href="./services.html">Digestive Disorders</a></li>
-          <li><a href="./services.html">Hemorrhoids (Piles)</a></li>
+         <ul class="footer-links" id="footerServiceLinks">
+          <li><a href="./services.html#svc-1">Psoriasis</a></li>
+          <li><a href="./services.html#svc-2">Hair Problems, Hair Fall & Hair Growth</a></li>
+          <li><a href="./services.html#svc-3">Marital Life Problems</a></li>
+          <li><a href="./services.html#svc-4">Digestive Disorders</a></li>
+          <li><a href="./services.html#svc-5">Hemorrhoids (Piles)</a></li>
         </ul>
       </div>
       <div class="col-lg-3">
         <h6>Follow Us</h6>
         <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=6159092350207" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/sudarshanayurvedahospital/" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.youtube.com/@sudarshanayurvedahospital" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61590923502077" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/sudarshanayurvedacentre/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCOG59hq217nGDN2wRkL2xsw" target="_blank"><i class="bi bi-youtube"></i></a>
           <!-- <a href="https://wa.me/919959092350" target="_blank"><i class="bi bi-whatsapp"></i></a> -->
         </div>
       </div>
@@ -840,5 +922,6 @@ https://www.youtube.com/channel/UCOG59hq217nGDN2wRkL2xsw -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scripts/script.js"></script>
+  <script src="scripts/contact.js"></script>
 </body>
 </html>
