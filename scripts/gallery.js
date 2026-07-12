@@ -1,6 +1,6 @@
 /* ==========================================================================
    gallery.js
-   Sudarshan Ayurveda Hospital — Gallery Page
+   Sudarshan AYURVEDA CENTRE — Gallery Page
    Data-driven gallery: filters, masonry, lightbox, load-more
    ========================================================================== */
 

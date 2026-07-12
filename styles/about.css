@@ -143,6 +143,7 @@
   gap: 8px;
   width: 234px;
   height: 100px;
+  align-items: center;
 }
 .mini-stat__content{
   text-align: left;
@@ -155,7 +156,7 @@
   font-size: 1.3rem;
   margin-bottom: 2px;
 }
-.mini-stat p { font-size: 0.72rem; color: #666; margin: 0; }
+.mini-stat p { font-size: 0.72rem; color: #666; margin: 0; font-weight: 800;}
 
 /* ==========================================================================
    SECTION 3 — HERITAGE / DR. PROFILE

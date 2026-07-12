@@ -1,6 +1,6 @@
 /* ==========================================================================
    services.js
-   Sudarshan Ayurveda Hospital — Services Page
+   Sudarshan AYURVEDA CENTRE — Services Page
    All service data + dynamic rendering (no page reload, no duplicate HTML)
    ========================================================================== */
 
@@ -786,37 +786,37 @@ const SERVICES = [
       'Traction alopecia from tight hairstyles',
     ],
   },
-   {
-    id: 20,
-    icon: 'bi-flower2',
-    serviceName: 'Obesity',
-    shortIntro: 'Achieve a Healthy Weight with Natural Ayurvedic Care',
-    image: '../images/Services/20-Obesity.jpg',
-    imagePlaceholderIcon: 'bi-stars',
-    description:
-      'Obesity is a condition caused by excessive body fat that can increase the risk of diabetes, high blood pressure, heart disease, joint pain, and other health problems. It is often linked to unhealthy eating habits, lack of physical activity, hormonal imbalance, stress, and poor metabolism. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that focus on the root cause, helping you lose weight naturally while improving your overall health.',
-    benefits: [
-      'Stimulates dormant hair follicles to regrow',
-      'Nourishes the scalp and strengthens hair roots',
-      'Corrects underlying autoimmune and hormonal triggers',
-      'Reduces scalp inflammation and oxidative stress',
-      'Promotes healthy, thick, natural hair regrowth',
-    ],
-    procedure: [
-      'Hair loss pattern and dosha analysis',
-      'Shirodhara and medicated scalp oil therapy',
-      'Nasya for scalp nourishment via nasal route',
-      'Blood-purifying and immuno-modulating herbs',
-      'Nutritional supplementation through Rasayana therapy',
-    ],
-    duration: '12 – 24 weeks for visible regrowth',
-    suitableFor: [
-      'Alopecia areata (patchy hair loss)',
-      'Androgenetic alopecia (male/female pattern)',
-      'Telogen effluvium (stress-related diffuse loss)',
-      'Traction alopecia from tight hairstyles',
-    ],
-  },
+  //  {
+  //   id: 20,
+  //   icon: 'bi-flower2',
+  //   serviceName: 'Obesity',
+  //   shortIntro: 'Achieve a Healthy Weight with Natural Ayurvedic Care',
+  //   image: '../images/Services/20-Obesity.jpg',
+  //   imagePlaceholderIcon: 'bi-stars',
+  //   description:
+  //     'Obesity is a condition caused by excessive body fat that can increase the risk of diabetes, high blood pressure, heart disease, joint pain, and other health problems. It is often linked to unhealthy eating habits, lack of physical activity, hormonal imbalance, stress, and poor metabolism. At Sudarshan Ayurveda Centre, we provide personalized Ayurvedic treatments that focus on the root cause, helping you lose weight naturally while improving your overall health.',
+  //   benefits: [
+  //     'Stimulates dormant hair follicles to regrow',
+  //     'Nourishes the scalp and strengthens hair roots',
+  //     'Corrects underlying autoimmune and hormonal triggers',
+  //     'Reduces scalp inflammation and oxidative stress',
+  //     'Promotes healthy, thick, natural hair regrowth',
+  //   ],
+  //   procedure: [
+  //     'Hair loss pattern and dosha analysis',
+  //     'Shirodhara and medicated scalp oil therapy',
+  //     'Nasya for scalp nourishment via nasal route',
+  //     'Blood-purifying and immuno-modulating herbs',
+  //     'Nutritional supplementation through Rasayana therapy',
+  //   ],
+  //   duration: '12 – 24 weeks for visible regrowth',
+  //   suitableFor: [
+  //     'Alopecia areata (patchy hair loss)',
+  //     'Androgenetic alopecia (male/female pattern)',
+  //     'Telogen effluvium (stress-related diffuse loss)',
+  //     'Traction alopecia from tight hairstyles',
+  //   ],
+  // },
 ];
 
 /* --------------------------------------------------------------------------
@@ -860,15 +860,17 @@ function listItems(arr) {
 /** Render the right-side service detail panel */
 function buildDetailHTML(svc) {
   return `
-    <div class="svc-detail" id="svcDetail">
+    <div class="svc-detail d-flex flex-column flex-lg-row" id="svcDetail">
 
       <!-- Image -->
-      <div class="svc-img-wrap">
+      <div class="svc-img-wrap col-12 col-md-6 col-lg-6 ">
         <!-- <i class="bi ${svc.image} img-placeholder"></i> -->
         <img src="${svc.image}" alt="${svc.serviceName}" class="svc-img" />
       </div>
 
       <!-- Title block -->
+      <div class="svc-detail__head col-12 col-md-6 col-lg-6">
+
       <span class="svc-detail__eyebrow">Ayurvedic Treatment</span>
       <h2 class="svc-detail__title">${svc.serviceName}</h2>
       <p class="svc-detail__intro">${svc.shortIntro}</p>
@@ -916,9 +918,7 @@ function buildDetailHTML(svc) {
           <ul><li>${svc.duration}</li></ul>
         </div> -->
 
-      </div><!-- /.svc-info-grid -->
-
-      <!-- CTA buttons -->
+        <!-- CTA buttons -->
       <div class="svc-cta-row">
         <a href="contact.html" class="btn btn-book-lg">
           <i class="bi bi-calendar-check me-2"></i>Book Appointment
@@ -929,6 +929,13 @@ function buildDetailHTML(svc) {
           <i class="bi bi-whatsapp me-2"></i>WhatsApp Now
         </a>
       </div>
+
+      </div><!-- /.svc-info-grid -->
+
+      
+      </div>
+
+      
 
     </div>`;
 }

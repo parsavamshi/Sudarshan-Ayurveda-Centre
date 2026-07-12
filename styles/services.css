@@ -50,7 +50,7 @@
 .svc-layout {
   display: flex;
   align-items: flex-start;
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 
 /* ==========================================================================
@@ -63,7 +63,8 @@
   min-height: 100%;
   position: sticky;
   top: 72px;          /* below fixed header */
-  max-height: calc(100vh - 72px);
+  max-height: 55vh;
+  /* max-height: calc(100vh - 72px); */
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-gold) transparent;
@@ -251,7 +252,9 @@
    ========================================================================== */
 .svc-content {
   flex: 1;
-  padding: 48px 52px;
+  /* padding: 48px 52px; */
+  /* padding: 16px 36px; */
+  padding: 30px 36px 0;
   min-width: 0; /* prevent overflow */
 }
 
@@ -266,6 +269,7 @@
 /* Fade transition wrapper */
 .svc-detail {
   animation: svcFadeIn .4s ease forwards;
+  gap: 32px;
 }
 @keyframes svcFadeIn {
   from { opacity: 0; transform: translateY(18px); }
@@ -274,7 +278,7 @@
 
 /* Service image */
 .svc-img-wrap {
-  width: 100%;
+  /* width: 100%; */
   /* aspect-ratio: 16 / 7; */
   border-radius: 18px;
   overflow: hidden;
@@ -287,11 +291,13 @@
   border: 2px solid rgba(212,175,55,0.3);
   margin-bottom: 32px;
   position: relative;
+  /* width: 960px;
+  height: 540px; */
 }
 .svc-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   /* display: none;   */
   /* shown when src is set */
 }
@@ -408,6 +414,7 @@
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -417,7 +424,9 @@
 /* Tablet (< 1200px) — narrow left panel */
 @media (max-width: 1199.98px) {
   .svc-nav  { width: 260px; }
-  .svc-content { padding: 36px 32px; }
+  .svc-content { padding: 26px 22px; }
+  /* .svc-content { padding: 36px 32px; } */
+  /* .svc-content { padding: 36px 32px; } */
 }
 
 /* Mobile (< 992px) — stacked layout */
@@ -462,4 +471,13 @@
   .svc-content { padding: 24px 16px; }
   .svc-img-wrap { aspect-ratio: 4/3; font-size: 4.5rem; }
   .svc-cta-row .btn { width: 100%; text-align: center; }
+}
+
+
+
+.svc-detail__head{
+  text-align: center;
+}
+.svc-divider{
+  margin: 0 auto 20px;
 }

@@ -1,5 +1,5 @@
 // ==========================================================================
-// Sudarshan Ayurveda Hospital - Main JS
+// Sudarshan AYURVEDA CENTRE - Main JS
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', function () {

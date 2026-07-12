@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Sudarshan Ayurveda Hospital - Custom Styles
+   Sudarshan AYURVEDA CENTRE - Custom Styles
    ========================================================================== */
 
 :root {
@@ -100,8 +100,10 @@ a { text-decoration: none; }
 }
 .brand-sub {
   color: #fff;
-  font-size: 0.65rem;
-  letter-spacing: 2px;
+  font-size: 0.75rem;
+  letter-spacing: 2.4px; 
+  /* font-size: 0.65rem;
+  letter-spacing: 2px; */
 }
 .brand-location {
   color: var(--color-gold);
@@ -842,7 +844,8 @@ a { text-decoration: none; }
   /* border: 1px solid rgba(212,175,55,0.3); */
   border: 3px solid #d4af37;
   border-radius: 18px;
-  padding: 50px 40px;
+  /* padding: 50px 40px; */
+  padding: 0px 16px;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -858,7 +861,7 @@ a { text-decoration: none; }
 }
 .testimonial-card p {
   font-size: 1.05rem;
-  font-style: italic;
+  /* font-style: italic; */
   /* color: #e8e8e8; */
   color:#000;
   line-height: 1.8;
@@ -871,6 +874,17 @@ a { text-decoration: none; }
 .carousel-control-prev, .carousel-control-next { width: 5%; }
 .carousel-indicators [data-bs-target] { background-color: var(--color-gold); }
 
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  font-size: 1.8rem !important;
+  font-weight: bold !important;
+  color: var(--color-gold);
+}
+
+.swiper-pagination-bullet-active{
+  color: var(--color-gold) !important;
+  background: var(--color-gold) !important;
+}
 /* ===== GALLERY SECTION ===== */
 .gallery-section { background: var(--color-cream); }
 .gallery-item {
@@ -924,11 +938,11 @@ a { text-decoration: none; }
 
 /* ===== FOOTER ===== */
 .site-footer { background: #081710; color: var(--color-text-muted); }
-.footer-brand { display: flex; align-items: center; gap: 12px; }
+.footer-brand { display: flex; align-items: center; gap: 12px; justify-content: center; }
 .footer-brand i { font-size: 2rem; color: var(--color-gold); }
-.footer-brand .brand-title { color: var(--color-gold-light); font-size: 1.05rem; }
-.footer-brand .brand-sub { color: #fff; font-size: 0.65rem; letter-spacing: 2px; }
-.site-footer p { font-size: 0.88rem; line-height: 1.6; }
+/* .footer-brand .brand-title { color: var(--color-gold-light); font-size: 1.05rem; } */
+/* .footer-brand .brand-sub { color: #fff; font-size: 0.65rem; letter-spacing: 2px; } */
+.site-footer p { font-size: 0.88rem; line-height: 1.6; text-align: center;}
 .site-footer h6 { color: #fff; font-weight: 600; margin-bottom: 14px; }
 .footer-links { list-style: none; padding: 0; }
 .footer-links li { margin-bottom: 8px; }
@@ -943,6 +957,43 @@ a { text-decoration: none; }
   color: var(--color-gold);
   transition: all .2s ease;
 }
+
+
+.site-footer .brand-logo{
+  /* width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; */
+  width: 35%;
+    height: 51%;
+    /* border-radius: 50%; */
+    object-fit: cover;
+
+}
+.footer-brand .brand-sub{
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  line-height: normal;
+}
+
+.footer-brand .brand-title{
+color: var(--color-gold-light);
+    font-size: 2.05rem;
+  line-height: normal;
+
+}
+.footer-brand .brand-location{
+    color: var(--color-gold);
+    font-size: 1rem;
+    letter-spacing: 6px;
+    margin-top: 2px;
+    text-align: center;
+  line-height: normal;
+
+}
+
+
 .social-icons a:hover { background: var(--color-gold); color: #081710; }
 .site-footer hr { border-color: rgba(255,255,255,0.1); margin: 30px 0 20px; }
 .copyright { font-size: 0.82rem; color: #8a958e; }
@@ -1200,10 +1251,11 @@ a { text-decoration: none; }
 @media (max-width: 575.98px) {
   .hero-section {
     padding: 0;
+    height: 100vh;
   }
 
   .hero-shell {
-    padding-top: 88px;
+    padding-top: 0px;
   }
 
   .hero-copy {
