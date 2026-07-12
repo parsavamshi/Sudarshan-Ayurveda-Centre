@@ -1320,6 +1320,7 @@ color: var(--color-gold-light);
   .hero-actions {
     width: 100%;
     gap: 12px;
+    flex-wrap: nowrap;
   }
 
   .hero-action {
