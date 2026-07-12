@@ -610,11 +610,13 @@ a { text-decoration: none; }
 }
 
 .hero-actions {
-  margin: 0 0 28px 6.35vw;
+  margin: 0 0 28px 7vw;
+  /* margin: 0 0 28px 6.35vw; */
   /* margin: 0 0 28px 3.35vw; */
   display: flex;
   align-items: center;
   gap: clamp(14px, 1.2vw, 24px);
+  /* justify-content: center; */
 }
 
 .hero-action {
