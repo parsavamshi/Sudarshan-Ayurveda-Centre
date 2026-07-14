@@ -431,6 +431,22 @@
 
 /* Mobile (< 992px) — stacked layout */
 @media (max-width: 991.98px) {
+  .svc-hero{
+    padding: 30px 0 30px;
+  }
+  .footer-brand .brand-title{
+    font-size:1.8rem;
+  }
+  .footer-brand .brand-sub{
+    font-size:1.1rem;
+  }
+  .footer-brand .brand-location{
+    margin-top: 0px;
+    font-size:0.9rem;
+  }
+  .ornament-divider{
+    display: none;
+  }
   .svc-layout   { flex-direction: column; }
   .svc-nav {
     width: 280px;
@@ -480,4 +496,8 @@
 }
 .svc-divider{
   margin: 0 auto 20px;
+}
+
+.btn-book-lg{
+  background:#FFD700 ;
 }
