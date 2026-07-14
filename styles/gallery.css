@@ -8,8 +8,8 @@
    ========================================================================== */
 .glr-hero {
   position: relative;
-  /* background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%); */
-  background-image: url('../images/Gallery-Banner.jpeg');
+  background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%);
+  /* background-image: url('../images/Gallery-Banner.jpeg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,8 +34,8 @@
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: clamp(2.4rem, 5vw, 4rem);
-  /* color: #fff; */
-  color: var(--color-dark-green);
+  color: #fff;
+  /* color: var(--color-dark-green); */
   margin-bottom: 40px;
 }
 .glr-breadcrumb { --bs-breadcrumb-divider: '›'; }
@@ -392,5 +392,12 @@
   .glr-grid { columns: 2 160px; column-gap: 12px; }
   .glr-card  { margin-bottom: 12px; }
   .glr-lightbox__nav { display: none; }
+
+  .glr-hero{
+     padding: 30px 0 30px;
+  }
+  .glr-hero__title{
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 479.98px)  { .glr-grid { columns: 1; } }

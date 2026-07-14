@@ -463,6 +463,15 @@
    ========================================================================== */
 @media (max-width: 991.98px) {
   .ctn-form-card { padding: 28px 22px; }
+  .ctn-hero{
+    padding: 32px 0;
+  }
+  .ctn-hero__title{
+    margin-bottom: 8px;
+  }
+  .ornament-divider{
+    margin-bottom: 8px !important; 
+  }
 }
 @media (max-width: 575.98px) {
   .ctn-form-card { padding: 24px 18px; }
@@ -736,3 +745,5 @@
                 max-width: 140px;
             }
         }
+
+        

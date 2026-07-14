@@ -444,9 +444,9 @@
     margin-top: 0px;
     font-size:0.9rem;
   }
-  .ornament-divider{
+  /* .ornament-divider{
     display: none;
-  }
+  } */
   .svc-layout   { flex-direction: column; }
   .svc-nav {
     width: 280px;

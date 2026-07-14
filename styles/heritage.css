@@ -468,10 +468,25 @@ html {
   .our-heritage-hero { padding-top: 55px; padding-bottom: 45px; }
   .hero-title { font-size: clamp(2.6rem, 10vw, 3.6rem); }
   .hero-tree-wrapper { min-height: 420px; }
+
+  .glr-hero{
+    padding: 50px 0;
+  }
+  .our-heritage-hero .row{
+    flex-direction: column-reverse;
+  }
 }
 
 @media (max-width: 575px) {
   .feature-box { min-height: 88px; padding: 16px; }
   .hero-tagline { font-size: 0.92rem; }
   .strip-copy { font-size: 1.05rem; }
+  .hero-copy{
+    display: block;
+    padding: 0 ;
+
+  }
+  .hero-tree-wrapper{
+    padding: 0;
+  }
 }
