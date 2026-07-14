@@ -3,6 +3,10 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', function () {
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
   // ---- Active nav link on scroll ----
   const sections = document.querySelectorAll('section[id]');
@@ -73,6 +77,10 @@ function toggleHeaderBg() {
   }
 }
 window.addEventListener('scroll', toggleHeaderBg);
+window.addEventListener('pageshow', () => {
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  toggleHeaderBg();
+});
 toggleHeaderBg(); // run once on load in case page refreshes mid-scroll
 
 

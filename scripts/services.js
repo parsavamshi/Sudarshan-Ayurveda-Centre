@@ -964,36 +964,31 @@ function loadService(id) {
     // Fade back in
     contentArea.style.opacity = '1';
     contentArea.style.transform = 'translateY(0)';
-    // Scroll content into view on mobile
-    if (window.innerWidth < 992) {
-      contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+
+    // Highlight desktop nav buttons
+    document.querySelectorAll('.svc-nav__btn').forEach(btn => {
+      const active = parseInt(btn.dataset.id) === id;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', active);
+    });
+
+    // Highlight mobile tab pills
+    document.querySelectorAll('.svc-tab-btn').forEach(btn => {
+      const active = parseInt(btn.dataset.id) === id;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', active);
+    });
   }, 220);
-
-  // Highlight desktop nav buttons
-  document.querySelectorAll('.svc-nav__btn').forEach(btn => {
-    const active = parseInt(btn.dataset.id) === id;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', active);
-  });
-
-  // Highlight mobile tab pills
-  document.querySelectorAll('.svc-tab-btn').forEach(btn => {
-    const active = parseInt(btn.dataset.id) === id;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', active);
-
-    // Scroll active tab into view on mobile
-    if (active && window.innerWidth < 992) {
-      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
-  });
 }
 
 /* --------------------------------------------------------------------------
    INITIALISE
    -------------------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
   /* ── Build desktop navigation list ── */
   const listEl = document.getElementById('svcNavList');
@@ -1018,22 +1013,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const svcMenuToggle = document.getElementById('svcMenuToggle');
   const svcNavClose = document.getElementById('svcNavClose');
   const svcBackdrop = document.getElementById('svcBackdrop');
-
-  /* ── Create stable fragment anchors for each service so external links jump correctly ── */
-  const svcContentEl = document.getElementById('svcContent');
-  if (svcContentEl) {
-    SERVICES.forEach(svc => {
-      if (!document.getElementById(`svc-${svc.id}`)) {
-        const a = document.createElement('div');
-        a.id = `svc-${svc.id}`;
-        // leave visual layout unchanged; allow header offset when scrolling
-        a.style.height = '0px';
-        a.style.overflow = 'hidden';
-        a.style.scrollMarginTop = '100px';
-        svcContentEl.parentNode.insertBefore(a, svcContentEl);
-      }
-    });
-  }
 
   function closeSvcNav() {
     svcNav.classList.remove('svc-nav--open');
@@ -1076,16 +1055,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!Number.isNaN(parsed) && SERVICES.some(s => s.id === parsed)) initial = parsed;
     }
     loadService(initial);
-    // After rendering, ensure page scrolls to the fragment (works when navigated from other pages)
-    setTimeout(() => {
-      const target = document.getElementById(`svc-${initial}`);
-      if (target) {
-        try { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-        catch (e) { target.scrollIntoView(); }
-      }
-    }, 300);
 
-    // Handle hash changes (e.g., clicking footer links while already on services.html)
+    // Handle hash changes without forcing scroll jumps
     window.addEventListener('hashchange', () => {
       const hash = window.location.hash || '';
       const m = hash.match(/#?svc-(\d+)/) || hash.match(/#(\d+)/);
@@ -1093,15 +1064,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = parseInt(m[1], 10);
         if (!Number.isNaN(id) && SERVICES.some(s => s.id === id)) {
           loadService(id);
-          setTimeout(() => {
-            const tgt = document.getElementById(`svc-${id}`);
-            if (tgt) tgt.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 220);
         }
       }
     });
 
-    // Intercept clicks on anchors that point to service fragments so we can SPA-load and scroll
+    // Intercept clicks on anchors that point to service fragments so we can SPA-load without scrolling the page
     document.addEventListener('click', (e) => {
       const a = e.target.closest && e.target.closest('a');
       if (!a) return;
@@ -1111,13 +1078,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = parseInt(m[1], 10);
         if (!Number.isNaN(id) && SERVICES.some(s => s.id === id)) {
           e.preventDefault();
-          // update URL and load
           history.pushState(null, '', `services.html#svc-${id}`);
           loadService(id);
-          setTimeout(() => {
-            const tgt = document.getElementById(`svc-${id}`);
-            if (tgt) tgt.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 220);
         }
       }
     });

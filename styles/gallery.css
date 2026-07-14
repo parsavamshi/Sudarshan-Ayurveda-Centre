@@ -400,4 +400,11 @@
     margin-bottom: 10px;
   }
 }
-@media (max-width: 479.98px)  { .glr-grid { columns: 1; } }
+@media (max-width: 479.98px)  {
+  .glr-grid { columns: 1; }
+  .glr-section { padding: 40px 0 60px; }
+  .glr-filters { margin-bottom: 28px; }
+  .glr-filter-btn { width: 100%; }
+  .glr-lightbox { padding: 14px; }
+  .glr-lightbox__caption { padding: 14px 16px; }
+}

@@ -478,6 +478,10 @@
   .ctn-map-iframe { height: 300px; }
   .ctn-map-card { display: none; }
   .ctn-social-icon { width: 78px; }
+  .ctn-info-card { padding: 24px 18px; }
+  .ctn-form-aside { position: static; }
+  .share-btn { width: 100%; justify-content: center; }
+  .popup { width: min(92vw, 340px); }
 }
 
 

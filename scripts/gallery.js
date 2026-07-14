@@ -209,13 +209,6 @@ function renderGrid() {
 loadMoreBtn.addEventListener('click', () => {
   visibleCount += 8;
   renderGrid();
-  // Smooth scroll to newly loaded section
-  setTimeout(() => {
-    const cards = gridEl.querySelectorAll('.glr-card');
-    if (cards.length) {
-      cards[cards.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  }, 300);
 });
 
 /* --------------------------------------------------------------------------

@@ -16,12 +16,37 @@
 
 * { box-sizing: border-box; }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
 body {
   /* font-family: var(--font-body); */
   background-color: var(--color-cream);
   color: #2c2c2c;
   overflow-x: hidden;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
+
+/* img, svg, video, iframe, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+.container-fluid,
+.row,
+[class*="col-"] {
+  max-width: 100%;
+}
+
+.navbar-brand,
+.navbar-nav,
+.brand-text {
+  min-width: 0;
+} */
 
 h1, h2, h3, h4, h5, .brand-title {
   font-family: var(--font-heading);
@@ -76,6 +101,11 @@ a { text-decoration: none; }
 }
 .navbar { padding: 10px 0;  }
 
+/* .navbar-brand {
+  max-width: 100%;
+  flex-wrap: nowrap;
+} */
+
 .brand-logo {
       width: 73px;
     height: 66px;
@@ -91,26 +121,29 @@ a { text-decoration: none; }
   margin-right: 12px;
   flex-shrink: 0; */
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
 .brand-title {
   color: var(--color-gold-light);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: clamp(0.95rem, 3.3vw, 1.3rem);
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 .brand-sub {
   color: #fff;
-  font-size: 0.75rem;
-  letter-spacing: 2.4px; 
+  font-size: clamp(0.58rem, 2.2vw, 0.75rem);
+  letter-spacing: clamp(1px, 1.8vw, 1.9px); 
+  white-space: nowrap;
   /* font-size: 0.65rem;
   letter-spacing: 2px; */
 }
 .brand-location {
   color: var(--color-gold);
-  font-size: 0.6rem;
-  letter-spacing: 6px;
+  font-size: clamp(0.5rem, 1.6vw, 0.6rem);
+  letter-spacing: clamp(2px, 2.2vw, 4px);
   margin-top: 2px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .navbar-nav .nav-link {
@@ -1041,7 +1074,36 @@ color: var(--color-gold-light);
     margin:0;
     gap: 10px !important;
   }
+
+  .brand-text {
+    max-width: min(100%, 220px);
+  }
 }
+
+/* @media (max-width: 575.98px) {
+  .navbar-brand {
+    gap: 8px !important;
+  }
+
+  .brand-logo {
+    width: 56px;
+    height: auto;
+  }
+
+  .brand-title {
+    font-size: 0.9rem !important;
+  }
+
+  .brand-sub {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .brand-location {
+    font-size: 0.42rem;
+    letter-spacing: 2px;
+  }
+} */
 
 @media (max-width: 575.98px) {
   .hero-section { padding: 40px 0 30px; }
@@ -1049,6 +1111,9 @@ color: var(--color-gold-light);
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { width: 100%; text-align: center; }
   .testimonial-card { padding: 36px 22px; }
+  .brand-sub {
+      letter-spacing: clamp(1px, 1.8vw, 1.6px);
+  }
 
   .mt-lg-0{
   margin-top: 0px !important;
@@ -1091,6 +1156,13 @@ color: var(--color-gold-light);
 }
 
 @media (max-width: 991.98px) {
+  .footer-brand .brand-title{
+        font-size: 1.8rem;
+  }
+  .footer-brand .brand-sub{
+        font-size: 1.1rem;
+
+  }
   .hero-section {
     min-height: auto;
     background-image: url('../images/hero-mobile-bg.png');
@@ -1192,7 +1264,7 @@ color: var(--color-gold-light);
   }
 
   .hero-stat strong {
-    font-size: clamp(1rem, 3.9vw, 1.9rem);
+    font-size: clamp(1rem, 3.6vw, 1.9rem);
   }
 
   .hero-stat span {
@@ -1325,7 +1397,7 @@ color: var(--color-gold-light);
   } */
 
   .hero-stat strong {
-    font-size: clamp(0.8rem, 3.9vw, 1.48rem);
+    font-size: clamp(0.8rem, 3.6vw, 1.48rem);
   }
 
   .hero-stat span {

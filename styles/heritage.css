@@ -116,9 +116,12 @@ html {
 .our-heritage-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #f7efe3 0%, #efdbc0 100%);
+  /* background: linear-gradient(180deg, #f7efe3 0%, #efdbc0 100%); */
+  background: url('../images/Tree-bg.jpeg') no-repeat center center;
   padding: 60px 0 60px;
+  background-size: cover;
 }
+
 
 .our-heritage-hero::before {
   content: '';
@@ -133,7 +136,7 @@ html {
 
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-size: clamp(3rem, 4.5vw, 4.9rem);
   line-height: 0.95;
   color: var(--heritage-dark);
   font-weight: 800;
@@ -255,6 +258,7 @@ html {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--heritage-dark);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .heritage-card p,
@@ -359,7 +363,7 @@ html {
   display: flex;
   gap: 18px;
   align-items: flex-start;
-  min-height: 115px;
+  /* min-height: 115px; */
 }
 
 .recognition-tile i {
@@ -495,5 +499,23 @@ html {
   }
   .hero-tree-wrapper{
     padding: 0;
+    min-height: auto;
   }
+  .heritage-card,
+  .award-card,
+  .recognition-tile,
+  .strip-stat {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+
+.recognition-features-list i{
+
+  margin-top: 4px;
+    /* color: var(--heritage-dark); */
+    color: #E8D7A6;
+    font-size: 1.1rem;
+    min-width: 22px;
 }
