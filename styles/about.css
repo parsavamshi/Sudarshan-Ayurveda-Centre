@@ -433,8 +433,13 @@
     padding: 14px 12px;
   }
   .dr-profile-card { max-width: 100%; }
-  .dr-profile-card__photo { height: 180px; }
+  .dr-profile-card__photo { height: fit-content; }
+  /* .dr-profile-card__photo { height: 180px; } */
   .dignitary-list li { font-size: 0.86rem; }
+  .dr-profile-card__photo img{
+    width:100%;
+    height: 100%;
+  }
 }
 
 /* ==========================================================================

@@ -1434,8 +1434,8 @@ color: var(--color-gold-light);
   }
 
   .hero-copy {
-    padding: 0 12px;
-    display: none;
+    padding: 40px 12px 0;
+    /* display: none; */
   }
 
   .hero-brand-lockup {
@@ -1448,21 +1448,23 @@ color: var(--color-gold-light);
   }
 
   .hero-brand-text h1 {
-    font-size: clamp(2.85rem, 15.8vw, 4.7rem);
+    font-size: clamp(2.85rem, 10vw, 4.7rem);
   }
 
   .hero-brand-text p {
-    font-size: clamp(1.18rem, 6.4vw, 2.05rem);
+    font-size: clamp(1.18rem, 5vw, 2.05rem);
     letter-spacing: 0.08em;
   }
 
   .hero-legacy {
-    font-size: clamp(1.52rem, 7.4vw, 2.15rem);
+    /* font-size: clamp(1.52rem, 7.4vw, 2.15rem); */
+    font-size:  clamp(0.9rem, 2.4vw, 2.15rem);;
   }
 
   .hero-doctor {
     width: min(88vw, 390px);
     margin-top: 14px;
+    margin-left: -30px;
   }
 
   .hero-details {
