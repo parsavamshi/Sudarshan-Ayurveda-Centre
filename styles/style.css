@@ -1418,7 +1418,7 @@ color: var(--color-gold-light);
 @media (max-width: 575.98px) {
   .hero-section {
     padding: 0;
-    height: 94vh;
+    height: 100vh;
   }
 
   .hero-shell {
