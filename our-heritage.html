@@ -24,15 +24,28 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/heritage.css">
 </head>
-<body class="heritage-page is-loading">
+<body class="">
 
 <!-- Page loader: the text remains visible if the WebM animation is unavailable. -->
- <div class="loader" id="siteLoader">
+<!-- <div id="page-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="page-loader__fallback" aria-hidden="true">
+    <span>SUDARSHAN</span>
+    <small>AYURVEDA CENTRE</small>
+  </div>
+  <video class="page-loader__video" autoplay muted playsinline loop aria-hidden="true">
+     Add the supplied animation at videos/loader.webm; the fallback above is used if it cannot play. --
+    <source src="./videos/loader.webm" type="video/webm">
+  </video>
+</div> -->
+
+<div class="loader" id="siteLoader">
   <img src="./images/icons/Logo-Web.gif" alt="Loading..." class="loader-gif">
 </div>
 <div class="loader2" id="siteLoader2">
   <img src="./images/icons/Logo-Mobile.gif" alt="Loading..." class="loader-gif2">
 </div>
+
+
 
 <header class="site-header" id="header">
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -319,5 +332,6 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="scripts/heritage.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

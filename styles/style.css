@@ -1125,7 +1125,7 @@ color: var(--color-gold-light);
   margin: auto;
   text-align: center;
   display: block;
-  height: 100%;
+  
 }
 
 .loader{
@@ -1156,6 +1156,13 @@ color: var(--color-gold-light);
   .hero-bottom img{
   width: 30px;
   height: 30px;
+}
+
+.about-hero, .svc-hero, .glr-hero, .ctn-hero{
+  padding:20px !important;  
+}
+.about-hero .ornament-divider, .svc-hero .ornament-divider, .glr-hero .ornament-divider, .ctn-hero .ornament-divider {
+  display:none;
 }
 }
 

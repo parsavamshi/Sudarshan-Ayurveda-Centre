@@ -93,9 +93,9 @@ body.heritage-page.is-loading {
   pointer-events: none;
 } */
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .hero-copy,
 .hero-tree-wrapper,
