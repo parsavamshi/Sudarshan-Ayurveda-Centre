@@ -41,8 +41,14 @@
 .about-hero {
   position: relative;
   background: linear-gradient(120deg, #081710 0%, #0f2a1d 55%, #173a26 100%);
-  padding: 110px 0 80px;
-  overflow: hidden;
+  padding: 86px 0 80px;
+  /* overflow: hidden; */
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 110px 0 80px;   */
+  /* padding: 140px 0 130px; */
+  /* padding: 180px 0 160px; */
 }
 .about-hero::before {
   content: '';

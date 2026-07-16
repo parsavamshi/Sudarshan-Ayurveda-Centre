@@ -36,8 +36,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 110px 0 80px;
-  overflow: hidden;
+  /* padding: 110px 0 80px; */
+  padding: 80px 0 80px;  
+
+  /* min-height: calc(100vh - 92px); */
+  /* display: flex;
+  align-items: center;
+  overflow: hidden; */
 }
 .ctn-hero::before {
   content: '';
@@ -468,13 +473,21 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 @media (max-width: 991.98px) {
   .ctn-form-card { padding: 28px 22px; }
   .ctn-hero{
-    padding: 32px 0;
+    padding: 110px 0 80px;
+    min-height: calc(100vh - 92px);
   }
   .ctn-hero__title{
     margin-bottom: 8px;
   }
   .ornament-divider{
     margin-bottom: 8px !important; 
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ctn-hero {
+    padding: 50px 0;
+    min-height: 100px;
   }
 }
 @media (max-width: 575.98px) {

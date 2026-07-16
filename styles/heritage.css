@@ -17,6 +17,82 @@ body.heritage-page {
   color: var(--heritage-text);
 }
 
+/* Keep the page still until the loader has completed its fade-out. */
+body.heritage-page.is-loading {
+  overflow: hidden;
+}
+
+/* Full-viewport loader with a branded fallback behind the optional WebM video. */
+/* #page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--heritage-dark);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .5s ease;
+}
+
+#page-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(200,162,74,.18), transparent 55%);
+}
+
+.page-loader__video,
+.page-loader__fallback {
+  position: relative;
+  z-index: 1;
+}
+
+.page-loader__video {
+  width: min(320px, 70vw);
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.page-loader__fallback {
+  display: grid;
+  gap: 5px;
+  text-align: center;
+  color: var(--heritage-gold-light);
+  letter-spacing: .14em;
+}
+
+.page-loader__fallback span {
+  color: var(--heritage-gold);
+  font: 700 clamp(1.5rem, 4vw, 2.2rem) 'Cinzel', serif;
+}
+
+.page-loader__fallback small {
+  font-size: .72rem;
+  font-weight: 700;
+} */
+
+/* A successfully playing video replaces the fallback without affecting layout. */
+/* #page-loader.is-video-playing .page-loader__fallback {
+  display: none;
+} */
+
+/* Fade first; JavaScript applies is-hidden after this transition finishes. */
+/* #page-loader.is-fading {
+  opacity: 0;
+} */
+
+/* Hide only after the opacity transition is complete. */
+/* #page-loader.is-hidden {
+  visibility: hidden;
+} */
+
+/* Disable interaction last, after the loader is no longer visible. */
+/* #page-loader.is-inactive {
+  pointer-events: none;
+} */
+
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +117,10 @@ html {
   /* padding: 110px 0 80px;   */
   /* padding: 140px 0 130px; */
   padding: 180px 0 160px;
-  overflow: hidden;
+  /* min-height: calc(100vh - 92px); */
+  /* display: flex;
+  align-items: center;
+  overflow: hidden; */
 }
 .glr-hero::before {
   content: '';
@@ -296,6 +375,10 @@ html {
 
 .award-card .award-img{
   width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 
@@ -341,8 +424,14 @@ html {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(232,215,166,0.18);
   border-radius: 32px;
-  padding: 42px 34px;
-  min-height: 100%;
+  /* padding: 42px 34px; */
+  padding:30px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 466px;
   /* box-shadow: 0 28px 80px rgba(0,0,0,0.24); */
       box-shadow: 6px 7px 4px rgb(0 0 0 / 35%);
 }
@@ -377,6 +466,8 @@ html {
 .recognition-features {
   display: grid;
   gap: 20px;
+  height: 100%;
+  align-content: start;
 }
 
 .recognition-tile {
@@ -406,7 +497,7 @@ html {
   line-height: 1.5;
 }
 .recognition-tile{
-  padding: 15px;
+  padding: 0px;
 }
 .heritage-strip-section {
   background: linear-gradient(180deg, #fbf3e6 0%, #f0e2ca 100%);
@@ -425,6 +516,26 @@ html {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.1rem, 1.7vw, 1.45rem);
   letter-spacing: .02em;
+
+
+  text-align: center;
+    /* display: table; */
+    justify-content: center;
+    margin: auto;
+    /* background: #22a85a; */
+    background: var(--heritage-dark);
+    color: #fff;
+    font-weight: bold;
+    /* background: rgba(201, 168, 76, 0.12); */
+    backdrop-filter: blur(4px);
+    padding: 6px 18px;
+    border-radius: 60px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    /* color: var(--gold); */
+    /* display: inline-block; */
+    margin-bottom: 24px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
 }
 
 .strip-divider {
@@ -437,7 +548,14 @@ html {
   margin: 0;
   font-weight: 700;
   font-size: 18px;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* font-family: 'Philosopher', sans-serif; */
+    font-weight: 600;
+    /* line-height: 1.1; */
+    /* color: #333333; */
+        font-size: clamp(1rem, 4vw, 1.4rem);
+    font-family: 'Cinzel';
 }
 
 .strip-stat {
@@ -506,6 +624,7 @@ html {
 
   .glr-hero {
     padding: 50px 0;
+    min-height: 100px;
   }
 
   .our-heritage-hero .row {
@@ -557,5 +676,16 @@ html {
   font-size: 18px;
 }
 .recognition-features h3{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Cinzel';
+  font-weight: 600;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--heritage-gold-light);
 }
+.recognition-features h3::before{
+  content: none;
+}
+/* border-bottom: 2px solid var(--heritage-gold-light);  */
