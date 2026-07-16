@@ -135,27 +135,40 @@ html {
 .our-heritage-hero .row { position: relative; z-index: 1; }
 
 .hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 4.5vw, 4.9rem);
+  /* font-family: 'Cormorant Garamond', serif; */
+  /* font-family: cinzal; */
+  font-family: 'Cinzel';
+
+  /* font-size: clamp(3rem, 4.5vw, 4.6rem); */
+  font-size: clamp(3rem, 4.5vw, 3.2rem);
+
   line-height: 0.95;
   color: var(--heritage-dark);
   font-weight: 800;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .hero-copy .eyebrow {
-  display: inline-flex;
+  /* display: inline-flex;
   letter-spacing: .24em;
   font-size: .9rem;
   color: var(--heritage-gold);
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+      display: inline-flex;
+    letter-spacing: .24em;
+    font-size: 26px;
+    color: #214b36;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .hero-tagline {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 12px;
   color: var(--heritage-dark);
@@ -170,8 +183,9 @@ html {
 }
 
 .hero-paragraph {
-  font-family: 'Lora', serif;
-  font-size: 1.06rem;
+  /* font-family: 'Lora', serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
   line-height: 1.85;
   max-width: 680px;
   color: #3e3429;
@@ -212,8 +226,9 @@ html {
 
 .feature-box p {
   margin: 0;
-  font-family: 'Lora', serif;
-  font-size: 0.96rem;
+  /* font-family: 'Lora', serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
   font-weight: 600;
   color: var(--heritage-dark);
 }
@@ -254,7 +269,8 @@ html {
 }
 
 .heritage-card h2 {
-  font-family: 'Cormorant Garamond', serif;
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--heritage-dark);
   margin-bottom: 20px;
@@ -263,7 +279,9 @@ html {
 
 .heritage-card p,
 .heritage-card li {
-  font-family: 'Lora', serif;
+  /* font-family: 'Lora', serif; */
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px !important;
   color: #4a3e33;
   line-height: 1.8;
   margin-bottom: 16px;
@@ -275,6 +293,11 @@ html {
   padding: 0;
   margin: 0 0 16px;
 }
+
+.award-card .award-img{
+  width: 100%;
+}
+
 
 .vision-list li {
   display: flex;
@@ -320,7 +343,8 @@ html {
   border-radius: 32px;
   padding: 42px 34px;
   min-height: 100%;
-  box-shadow: 0 28px 80px rgba(0,0,0,0.24);
+  /* box-shadow: 0 28px 80px rgba(0,0,0,0.24); */
+      box-shadow: 6px 7px 4px rgb(0 0 0 / 35%);
 }
 
 .award-icon-wrapper {
@@ -356,10 +380,11 @@ html {
 }
 
 .recognition-tile {
-  background: rgba(255,255,255,0.08);
+  /* background: rgba(255,255,255,0.08);
   border: 1px solid rgba(232,215,166,0.16);
-  border-radius: 22px;
-  padding: 22px 22px;
+  border-radius: 22px; */
+  /* padding: 22px 22px; */
+  padding: 16px;
   display: flex;
   gap: 18px;
   align-items: flex-start;
@@ -375,11 +400,14 @@ html {
 
 .recognition-tile strong {
   display: block;
-  font-size: 0.98rem;
+  /* font-size: 0.98rem; */
+  font-size: 14px;
   color: #f7e4c0;
   line-height: 1.5;
 }
-
+.recognition-tile{
+  padding: 15px;
+}
 .heritage-strip-section {
   background: linear-gradient(180deg, #fbf3e6 0%, #f0e2ca 100%);
   border-top: 1px solid rgba(200,162,74,0.18);
@@ -408,6 +436,8 @@ html {
 .strip-label {
   margin: 0;
   font-weight: 700;
+  font-size: 18px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .strip-stat {
@@ -470,7 +500,8 @@ html {
 
 @media (max-width: 767px) {
   .our-heritage-hero { padding-top: 55px; padding-bottom: 45px; }
-  .hero-title { font-size: clamp(2.6rem, 10vw, 3.6rem); }
+  /* .hero-title { font-size: clamp(2.6rem, 10vw, 3.6rem); } */
+  .hero-title{font-size: clamp(1.8rem, 7vw, 3.6rem);}
   .hero-tree-wrapper { min-height: 420px; }
 
   .glr-hero {
@@ -490,7 +521,7 @@ html {
 
 @media (max-width: 575px) {
   .feature-box { min-height: 88px; padding: 16px; }
-  .hero-tagline { font-size: 0.92rem; }
+  .hero-tagline { font-size: 13px; }
   .strip-copy { font-size: 1.05rem; }
   .hero-copy{
     display: block;
@@ -518,4 +549,13 @@ html {
     color: #E8D7A6;
     font-size: 1.1rem;
     min-width: 22px;
+}
+
+
+.recognition-features p, .recognition-tile strong{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+}
+.recognition-features h3{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

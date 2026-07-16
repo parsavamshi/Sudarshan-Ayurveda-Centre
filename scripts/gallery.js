@@ -156,11 +156,11 @@ function buildCard(img, globalIndex) {
         <i class="bi ${img.icon}"></i>
       </div>
 
-      <div class="glr-card__overlay">
+     <!-- <div class="glr-card__overlay">
         <p class="glr-card__overlay-cat">${img.category}</p>
         <p class="glr-card__overlay-title">${img.title}</p>
-      </div>
-
+      </div> -->
+ 
       <div class="glr-card__zoom-icon">
         <i class="bi bi-zoom-in"></i>
       </div>
@@ -244,8 +244,8 @@ function displayLightboxItem(index) {
 
     if (!img) return;
 
-    lbTitle.textContent = img.title;
-    lbDesc.textContent = img.description;
+    // lbTitle.textContent = img.title;
+    // lbDesc.textContent = img.description;
 
     lbImg.src = img.image;
     lbImg.alt = img.title;

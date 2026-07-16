@@ -871,7 +871,7 @@ function buildDetailHTML(svc) {
       <!-- Title block -->
       <div class="svc-detail__head col-12 col-md-6 col-lg-6">
 
-      <span class="svc-detail__eyebrow">Ayurvedic Treatment</span>
+      <!-- <span class="svc-detail__eyebrow">Ayurvedic Treatment</span> -->
       <h2 class="svc-detail__title">${svc.serviceName}</h2>
       <p class="svc-detail__intro">${svc.shortIntro}</p>
       <div class="svc-divider"></div>
