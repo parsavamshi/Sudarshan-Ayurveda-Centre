@@ -1120,8 +1120,8 @@ color: var(--color-gold-light);
 }
 
 .loader-gif2 {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 1260% !important;
+  max-width: 126% !important;
   margin: auto;
   text-align: center;
   display: block;

@@ -199,6 +199,7 @@ body.heritage-page.is-loading {
   background: url('../images/Tree-bg.jpeg') no-repeat center center;
   padding: 60px 0 60px;
   background-size: cover;
+  height: 100vh;
 }
 
 
@@ -320,6 +321,7 @@ body.heritage-page.is-loading {
   border-radius: 32px;
   padding: 0;
   overflow: hidden;
+  /* position: relative; */
 }
 
 .hero-tree-img {
@@ -329,6 +331,12 @@ body.heritage-page.is-loading {
   display: block;
   object-fit: contain;
   filter: drop-shadow(0 28px 60px rgba(33,75,54,0.16));
+}
+.hero-tree-img{
+  position: absolute;
+    bottom: -246px;
+    z-index: revert-layer;
+    right: -14px;
 }
 
 .heritage-cards-section {
@@ -628,13 +636,18 @@ body.heritage-page.is-loading {
   }
 
   .our-heritage-hero .row {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
   }
 
   .hero-tree-wrapper,
   .hero-tree-img {
     width: 100%;
     max-width: 100%;
+    position: unset;
+  }
+  .our-heritage-hero{
+    height: auto !important;
+    background-position: 42% center;
   }
 }
 
