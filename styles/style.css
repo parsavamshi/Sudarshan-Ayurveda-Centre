@@ -1125,6 +1125,7 @@ color: var(--color-gold-light);
   margin: auto;
   text-align: center;
   display: block;
+  height: 100%;
 }
 
 .loader{
