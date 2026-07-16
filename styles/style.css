@@ -1336,7 +1336,8 @@ color: var(--color-gold-light);
 
   .hero-stats {
     width: min(100%, 720px);
-    margin: 0 auto 18px;
+    /* margin: 0 auto 18px; */
+            margin: -140px auto 10px;
     border-radius: 18px;
   }
 
@@ -1426,7 +1427,7 @@ color: var(--color-gold-light);
 @media (max-width: 575.98px) {
   .hero-section {
     padding: 0;
-    height: 120vh;
+    height: 100vh;
   }
   .hero-bottom{
     display: none;

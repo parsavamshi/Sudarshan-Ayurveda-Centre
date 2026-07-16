@@ -654,7 +654,7 @@ body.heritage-page.is-loading {
 @media (max-width: 575px) {
   .feature-box { min-height: 88px; padding: 16px; }
   .hero-tagline { font-size: 13px; }
-  .strip-copy { font-size: 1.05rem; }
+  .strip-copy { font-size: 1.05rem;  display: none;}
   .hero-copy{
     display: block;
     padding: 0 ;
