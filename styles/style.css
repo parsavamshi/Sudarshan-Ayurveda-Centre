@@ -1439,7 +1439,8 @@ color: var(--color-gold-light);
   }
 
   .hero-brand-lockup {
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: center;
   }
 
   .hero-emblem {
@@ -1449,10 +1450,11 @@ color: var(--color-gold-light);
 
   .hero-brand-text h1 {
     font-size: clamp(2.85rem, 10vw, 4.7rem);
+    color: #fff !important;
   }
 
   .hero-brand-text p {
-    font-size: clamp(1.18rem, 5vw, 2.05rem);
+    font-size: clamp(1.8rem, 5vw, 2.05rem);
     letter-spacing: 0.08em;
   }
 
