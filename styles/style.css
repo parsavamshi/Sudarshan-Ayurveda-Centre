@@ -778,6 +778,10 @@ a { text-decoration: none; }
   font-size: clamp(2.3rem, 2vw, 4.2rem);
   line-height: 1;
 }
+.hero-bottom img{
+  width: 44px;
+  height: 44px;
+}
 
 .hero-bottom strong {
   display: block;
@@ -1091,6 +1095,10 @@ color: var(--color-gold-light);
   .brand-text {
     max-width: min(100%, 220px);
   }
+  .hero-bottom img{
+  width: 30px;
+  height: 30px;
+}
 }
 
 /* @media (max-width: 575.98px) {
