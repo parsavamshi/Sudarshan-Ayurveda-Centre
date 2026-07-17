@@ -1454,7 +1454,9 @@ color: var(--color-gold-light);
     width: 112px;
     flex: 0 0 auto;
   }
-
+.about-badge__txt{
+  font-size: 12px;;
+}
   .hero-brand-text h1 {
     font-size: clamp(2.85rem, 10vw, 4.7rem);
     color: #fff !important;
